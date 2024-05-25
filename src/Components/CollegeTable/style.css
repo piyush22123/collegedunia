@@ -1,0 +1,65 @@
+.heading{
+    text-align: center;
+    font-size: 24px;
+    text-decoration: underline 1px wavy red;
+}
+input{
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    outline: none;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px 10px;
+}
+
+.sorting-dropdown{
+    margin: 10px;
+    margin-bottom: 20px;
+    left: 110px;
+    position: absolute;
+}
+.sorting-dropdown select{
+    background-color: white;
+    outline: none;
+    border: 1.5px solid grey;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.table{
+    width: 98%;
+    height: 85vh;
+    border: 2px solid;
+    margin: 10px;
+    margin-top: 50px;
+    overflow: scroll;
+}
+th{
+    padding: 6px 12px;
+    text-align: left;
+}
+th {
+    background-color: #01b0f0;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    border: 1px solid rgb(193, 192, 192);
+}
+tr.featured {
+    background-color: #ffffe0;
+}
+
+.table .cdrank{
+    width: 100px;
+}
+.college{
+    width: 41vw;
+}
+.fee, .placement, .rank, .review, .rank{
+    width: 12vw;
+}
+.table-data{
+    padding: 0 2px;
+}

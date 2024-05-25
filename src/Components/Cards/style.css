@@ -1,0 +1,110 @@
+.card{
+    width: 100%;
+    height: 100px;
+    border: 1px solid;
+    display: flex;
+    gap: 2px;
+    border-bottom: 1px solid grey;
+}
+.col{
+    border: 1px solid grey;
+}
+.CDrank{
+    width: 100px;
+    padding: 5px;
+}
+.name{
+    width: 41vw;
+    padding: 5px;
+}
+.fees, .placements, .reviews, .ranking{
+    padding: 5px;
+    width: 12vw;
+}
+
+.CDrank{
+    font-size: 18px;
+    font-weight: 600;
+}
+.name .featured{
+    font-size: 15px;
+    width: 80px;
+    font-weight: 200;
+    text-align: center;
+    background-color: red;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: white;
+    margin-top: -6px;
+}
+.name h1{
+    font-size: 16px;
+    color: #01b0f0;
+    cursor: pointer;
+    margin-bottom: -10px;
+    margin-top: 4px;
+}
+.name p{
+    font-size: 13px;
+    font-weight: 200;
+}
+.name .button{
+    color: orange;
+    font-size: 14px;
+    cursor: pointer;
+    width: 80px;
+}
+.name .button:hover{
+    color: rgb(221, 108, 2);
+}
+.fees{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fees h4{
+    color: rgb(4, 197, 4);
+    margin-bottom: -10px;
+}
+.fees p{
+    font-size: 13px;
+}
+.placement{
+    text-align: center;
+}
+.placement h4{
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-size: 14px;
+}
+.placement p{
+    margin-bottom: -10px;
+    color: rgb(4, 197, 4);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.review h4{
+    text-align: center;
+    margin-bottom: -10px;
+    font-size: 17px;
+    font-weight: 200;
+}
+.review p{
+    text-align: center;
+    font-size: 13px;
+}
+.ranking h1{
+    font-size: 17px;
+    font-weight: 200;
+    margin-bottom: -10px;
+}
+
+@media screen and (max-width: 660px){
+    .placement p{
+        font-size: 13px;
+    }
+    .ranking h1{
+        font-size: 13px;
+    }
+}
