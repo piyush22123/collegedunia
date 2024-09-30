@@ -46,6 +46,7 @@ th {
     color: white;
     font-size: 14px;
     border: 1px solid rgb(193, 192, 192);
+    
 }
 tr.featured {
     background-color: #ffffe0;
@@ -62,4 +63,14 @@ tr.featured {
 }
 .table-data{
     padding: 0 2px;
+}
+
+.show-more{
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #01b0f0;
+    margin: 5px;
 }

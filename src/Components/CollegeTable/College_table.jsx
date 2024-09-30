@@ -7,17 +7,28 @@ const College_table = () => {
 
   // State variables for search query, sort criteria, and sort order
   const [searchQuery, setSearchQuery] = useState('');
-  // sortCriteria is used to store the current sorting criteria
+  // sortCriteria, used to store the current sorting criteria
   const [sortCriteria, setSortCriteria] = useState(null);
   // sortOrder is used to store the current sorting order (either 'ascending' or 'descending')
   const [sortOrder, setSortOrder] = useState('ascending');
+
+
+
+ // initially only 10 card will display
+  const [visibleCount, setVisibleCount] = useState(10);
+  // This function is called when the user clicks the "Show More" button, increases visibleCount by 10 on every click.
+  const handleShowMore = () => {
+    setVisibleCount((prevCount) => prevCount + 10);
+  };
+
+  
 
   // Handler for search input change
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
 
-  // This is a function named handleSortChange that updates the sortCriteria and sortOrder state 
+  // This handleSortChange updates the sortCriteria and sortOrder state 
   // variables when the value of the sorting dropdown changes.
   const handleSortChange = (e) => {
     const value = e.target.value;
@@ -53,6 +64,10 @@ const College_table = () => {
   const filteredColleges = sortedColleges.filter((college) =>
     college.college.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+ // display visibleCount no. of cards
+  const displayedColleges = filteredColleges.slice(0, visibleCount);
+
 
   return (
     <>
@@ -92,12 +107,18 @@ const College_table = () => {
           </thead>
         </table>
         <div className="table-data">
-        {/* we render the Card components using the filteredColleges array instead of the original collegesData. */}
-          {filteredColleges.map((college, index) => (
-              <Card key={index} data={college} />
-            ))}
-        </div>
+        {/* Render only up to the current visible count */}
+        {displayedColleges.map((college, index) => (
+          <Card key={index} data={college} />
+        ))}
       </div>
+    </div>
+    {/* Show more button if there are more colleges to display */}
+    {visibleCount < filteredColleges.length && (
+      <div className="show-more">
+        <button onClick={handleShowMore}>Show More...</button>
+      </div>
+    )}
     </>
   );
 }

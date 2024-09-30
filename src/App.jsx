@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
 import College_table from './Components/CollegeTable/College_table'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
